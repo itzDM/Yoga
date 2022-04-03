@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga</title>
+
+    <style>
+        body {
+            margin: 0px 0px;
+            font-family: 'Inter';
+            font-style: normal;
+            overflow-y: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            padding: 0px 10px 0px 90px;
+        }
+
+        .navbar ul {
+            display: flex;
+            margin-inline-start: 210px;
+
+        }
+
+        .navbar ul li {
+            padding: 10px 40px;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            letter-spacing: 1px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+
+            color: #E8401B;
+        }
+
+        .ga {
+            color: #50AB25;
+        }
+
+        li a {
+            color: #8C7D7D;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .drop {
+            position: relative;
+            border: none;
+            font-weight: 500;
+            font-size: 24px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+
+        li a.active {
+
+            color: #DB1818;
+        }
+
+        .btn {
+            border: none;
+            background: linear-gradient(251.38deg, #3FECEC 10.48%, rgba(105, 54, 249, 0) 111.14%);
+            border-radius: 25px;
+            color: #A40F0F;
+            font-weight: 700;
+            font-size: 19px;
+            width: 94px;
+            height: 30px;
+            cursor: pointer;
+
+
+        }
+
+        .image {
+            width: 807px;
+            height: 485px;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content .textb {
+            left: 115px;
+            position: relative;
+            width: 400px;
+            height: 350px;
+            margin-bottom: 65px;
+        }
+
+        .textb h1 {
+            font-family: 'Nirmala UI';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 80px;
+
+            color: #50AB25;
+        }
+
+        .textb .life {
+            color: #EC3F3F;
+        }
+
+
+        .trail {
+            background: #EA6B0F;
+            border: 3px solid #50AB25;
+            box-sizing: border-box;
+            border-radius: 25px;
+            color: aliceblue;
+            padding: 6px 12px;
+        }
+
+        .video {
+            border: 2px solid #E12424;
+            box-sizing: border-box;
+            border-radius: 25px;
+            padding: 6px 12px;
+            margin: 50px
+        }
+
+        .arrow {
+            position: relative;
+            left: -80px;
+            top: 14px;
+        }
+
+        .details {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .details .itm1,
+        .itm2,
+        .itm3 {
+            width: 165px;
+            height: 105px;
+            background: #FFEAEA;
+            border-radius: 15px;
+            text-align: center;
+
+        }
+
+        .details .itm1 a,
+        .itm2 a,
+        .itm3 a {
+            font-weight: 700;
+            font-size: 20px;
+            color: rgba(236, 63, 63, 0.91);
+
+        }
+
+        .details img {
+            padding: 10px 50px;
+            height: 55px
+        }
+
+        .warring {
+            display: none;
+        }
+
+
+        /* Animation */
+        .navbar li a:hover {
+            color: #DB1818;
+        }
+
+        @keyframes updown {
+            from {
+                top: 20px;
+
+            }
+
+            to {
+                top: 0px
+            }
+        }
+
+        .navbar {
+            animation: fadeDown 1000ms forwards;
+            opacity: 0;
+        }
+
+
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .details {
+            animation: fadetor 1000ms forwards cubic-bezier(0.42, 0, 0.19, 1.39);
+            opacity: 0;
+            animation-delay: 3s;
+        }
+
+        @keyframes fadetor {
+            from {
+                transform: translate(-100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(1px);
+            }
+        }
+
+
+        .textb img {
+            animation: fadein 1000ms forwards;
+            animation-delay: 2000ms;
+            animation-duration: 4s;
+            opacity: 0;
+            animation-iteration-count: 4;
+        }
+
+        @keyframes fadein {
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        @media screen and (max-width: 1420px) {
+            body {
+                background: rgba(37, 29, 49, 0.747)
+            }
+
+            .header-Content {
+                display: none;
+            }
+
+            .warring {
+                display: flex;
+                font-weight: 500;
+                color: #FFEAEA;
+                flex-direction: column;
+            }
+            .warring a{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warring">
+        <h1>This Site is Not Responsive, So For Better View Please Use Desktop Or Download site Image:-</h1>
+        <a href="./image/Yoga.png" download=""> <input type="button" value="Download Image"></a>
+    </div>
+    <div class="header-Content">
+        <nav class="navbar">
+            <div class="logo">
+                <h2>YO<span class="ga">GA</span></h2>
+            </div>
+            <ul>
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Blog</a></li>
+                <li><select name="language" id="" class="drop">
+                        <option value="">En</option>
+                        <option value="">Hindi</option>
+                    </select></li>
+                <li><input type="button" value="Sign up" class="btn"></li>
+            </ul>
+
+        </nav>
+
+
+        <div class="content">
+            <div class="textb">
+                <h1>Keep Track Of <br> Your Active <br><span class="life">Lifestyle.</span></h1>
+                <a href="" class="trail">Start 14 days trails</a>
+                <a href="" class="video">Watch Video</a>
+                <img class="arrow" src="image/Arrow 1.svg" alt="">
+            </div>
+
+            <div class="imageb">
+                <img class="image" src="image/man.png" alt="">
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="itm1">
+                <img src="image/med.svg" alt="">
+                <a href="">100+ Program</a>
+            </div>
+            <div class="itm2">
+                <img src="image/run.svg" alt="">
+                <a href="">30+ Instructor</a>
+            </div>
+            <div class="itm3">
+                <img src="image/Vector.svg" alt="">
+                <a href="">Year Experience</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
